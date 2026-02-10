@@ -20,7 +20,7 @@ def add_student():
 
     cursor.execute(sql, values)
     db.commit()
-    print("✅ Student added successfully")
+    print("Student added successfully")
 
 def delete_student():
     student_id = int(input("Enter student ID to delete: "))
@@ -30,9 +30,9 @@ def delete_student():
     db.commit()
 
     if cursor.rowcount > 0:
-        print("🗑️ Student deleted successfully")
+        print("Student deleted successfully")
     else:
-        print("❌ Student not found")
+        print("Student not found")
 
 def view_students():
     cursor.execute("SELECT * FROM students")
@@ -59,9 +59,10 @@ def menu():
         elif choice == "3":
             view_students()
         elif choice == "4":
-            print("👋 Exiting...")
+            print("Exiting...")
             break
         else:
-            print("❌ Invalid choice")
+            print("Invalid choice")
 
 menu()
+
